@@ -129,6 +129,6 @@ if (session.available.length !== 0) {
     nextWord(session, words, false);
 } else {
     let container = document.getElementById('container');
-    container.innerHTML = '<h1>Nie dodales zadnych slow!</h1>';
+    container.innerHTML = '<h1>Nie zaczales nowej sesji!</h1>';
     container.innerHTML += '<a href="index.html"><button>Powrot</button></a>';
 }
