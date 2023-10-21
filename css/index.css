@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background: #111;
+    color: white;
+    height: 100dvh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#container {
+    margin-top: max(75px, 7.5vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: min(200%, 5vw);
+    height: fit-content;
+}
+#container a {
+    display: flex;
+    text-decoration: none;
+}
+#container a, #container button {
+    width: 100%;
+}
+#container button {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+#container button:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+#container button:disabled {
+    color: darkgray;
+}
+#container button:disabled:hover {
+    cursor: not-allowed;
+}
+#splash-logo {
+    text-align: center;
+}

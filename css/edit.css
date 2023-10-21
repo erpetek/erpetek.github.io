@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background: #111;
+    color: white;
+    height: 100dvh;
+    width: 100vw;
+    overflow-x: hidden;
+    z-index: 0;
+}
+#container {
+    margin: max(50px, 7.5vw) 0 max(50px, 7.5vw) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#container button {
+    width: 100%;
+    padding: 10px 20px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+button {
+    background: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+button:disabled {
+    color: darkgray;
+}
+button:disabled:hover {
+    cursor: not-allowed;
+}
+#list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 20px;
+    gap: 5px;
+}
+#list li input {
+    width: min(200px, 25vw);
+}
+#list li button {
+    padding: 0 5px 0 5px;
+    height: 100%;
+    width: fit-content;
+}
+.fifty-fifty {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.fifty-fifty * {
+    flex: 1;
+}
+#container > a {
+    width: 50%;
+}
+#back {
+    width: 100%;
+}
+#instructions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+    font-size: 75%;
+}
+@media (min-width: 500px) {
+    #instructions {
+        font-size: 100%;
+    }
+}
+@media (min-width: 800px) {
+    #instructions {
+        font-size: 125%;
+    }
+}
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.fade-background {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.8);
+}
+.popup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+.popup button {
+    padding: 5px 0 5px 0;
+}
+.popup > input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 0 2px 0;
+}
+.hidden {
+    display: none;
+}
+#load-preset ul {
+    list-style-type: none;
+    padding: 0;
+}
+#load-preset ul li {
+    padding-bottom: 5px;
+}
+#load-preset ul li button {
+    padding-left: 5px;
+    text-align: left;
+    width: 100%;
+}

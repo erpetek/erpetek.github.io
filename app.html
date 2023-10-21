@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="js/app.js" defer></script>
+    <title>Document</title>
+</head>
+    <body>
+        <div id="container">
+            <h2>Przetłumacz!</h2>
+            <div id="word-container">
+                <h1 id="word-count">Słowo 0 z 0:</h1>
+                <h1 id="current-word" class="big-font">Brak</h1>
+            </div>
+            <input type="text" id="answer"/>
+            <button id="check-answer">Sprawdź</button>
+        </div>
+    </body>
+    <div id="popup" class="fullscreen popup-container hidden">
+        <div class="fullscreen fade-background"></div>
+        <div class="popup">
+            <h1 id="popup-title"></h1>
+            <h3 id="popup-msg1"></h3>
+            <h3 id="popup-msg2"></h3>
+            <button id="continue">Dalej</button>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/edit.css"/>
+        <script src="js/edit.js" defer></script>
+        <title>Edytuj Słowa</title>
+    </head>
+    <body>
+        <div id="container">
+            <ol id="list">
+
+            </ol>
+            <button onclick="addWord()">Dodaj nowe słowo</button>
+            <div class="fifty-fifty">
+                <button id="save">Zapisz jako...</button>
+                <button id="load">Wczytaj</button>
+            </div>
+            <a href="index.html">
+                <button id="back">Powrót</button>
+            </a>
+            <div id="instructions">
+                <h1>Jak to działa?</h1>
+                <p>Kliknij przycisk "Dodaj nowe słowo"</p>
+                <p>W lewym polu wpisz słowo do przetłumaczenia</p>
+                <p>W prawym polu wpisz oczekiwane tłumaczenie</p>
+                <p>Słowa zapisają się automatycznie</p>
+                <p>Możesz jednak je zapisać do późniejszej nauki</p>
+            </div>
+        </div>
+        <div id="save-preset" class="fullscreen popup-container hidden">
+            <div class="fullscreen fade-background"></div>
+            <div class="popup">
+                <h1>Zapisz jako...</h1>
+                <input type="text" id="preset-name"/>
+                <div class="fifty-fifty">
+                    <button class="save">Zapisz</button>
+                    <button class="cancel">Anuluj</button>
+                </div>
+            </div>
+        </div>
+        <div id="load-preset" class="fullscreen popup-container hidden">
+            <div class="fullscreen fade-background"></div>
+            <div class="popup">
+                <h1>Wczytaj slowa</h1>
+                <ul id="preset-list">
+                    <li><button>tak</button></li>
+                </ul>
+                <button class="cancel">Anuluj</button>
+            </div>
+        </div>
+    </body>
+</html>
