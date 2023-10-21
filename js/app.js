@@ -1,6 +1,12 @@
 console.warn('Oszukując tu oszukujesz tylko siebie :)');
 const rng = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const roundDecimal = (num, n = 4) => parseFloat(num.toFixed(n));
+function clearSession() {
+    if (localStorage.getItem('session')) {
+        localStorage.removeItem('session');
+    }
+    window.location.href = 'index.html';
+}
 function testRandom() {
     const randomFunction = rng;
     let min = 0;
@@ -108,9 +114,7 @@ checkBtn.addEventListener('click', () => {
         continueBtn.addEventListener('click', () => {
             showPopup('PODSUMOWANIE', `Ilość słów: ${words.length}`, `Ilość nieudanych prób: ${session.fails}`);
             continueBtn.textContent = 'Powrót do menu';
-            continueBtn.onclick = function() {
-                window.location.href = 'index.html';
-            }
+            continueBtn.onclick = clearSession;
         });
     } else {
         continueBtn.onmouseup = function() {
