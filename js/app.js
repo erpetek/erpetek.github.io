@@ -50,9 +50,7 @@ function nextWord(session, words, deleteCurrentWord = true) {
     let wordCount = document.getElementById('word-count');
     let word = document.getElementById('current-word');
     wordCount.textContent = `Słowo ${words.length - session.available.length + 1} z ${words.length}:`;
-    if (session.current[0]) {
-        word.textContent = session.current[0];
-    }
+    word.textContent = session.current[0];
 }
 function showPopup(title, msg1, msg2, titleClass = '') {
     let popupElement = document.getElementById('popup');
