@@ -213,7 +213,7 @@ const kapitelZwei = [
     },
     {
         "ger": "die Kreissparkasse",
-        "pol": "kasa oszczędności"
+        "pol": "orkęgowa kasa oszczędności"
     },
     {
         "ger": "die Taste",
