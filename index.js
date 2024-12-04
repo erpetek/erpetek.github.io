@@ -403,6 +403,7 @@ const okBtn = document.getElementById("ok");
 const opcje = document.getElementById("opcje");
 const optionsok = document.getElementById("optionsok");
 const optionsDiv = document.getElementById("options");
+const ansDiv = document.getElementById("ans");
 
 let mode = 0;
 
@@ -462,7 +463,7 @@ function rng(min, max) {
 }
 
 function draw_word() {
-    let randomIndex = rng(0, availableWords.length - 1);
+    let randomIndex = rng(0, availableWords.length);
     let word = availableWords[randomIndex];
     availableWords.splice(randomIndex, 1);
     let t = word.ger;
@@ -472,26 +473,29 @@ function draw_word() {
     }
     let ok = mode;
     if (ok === 2) {
-        ok = rng(0, 1);
+        ok = rng(0, 2);
     }
     if (ok) {
-        return [t, a];
-    } else {
         return [a, t];
+    } else {
+        return [t, a];
     }
 }
 
-submitBtn.addEventListener("click", function() {
+function submit() {
     if (answer === undefined) {
         answer = draw_word();
         toTranslateSpan.textContent = answer[0];
         return;
     }
     lastInputSpan.textContent = input.value;
+    ansDiv.textContent = answer[0];
     expectedSpan.textContent = answer[1];
     appDiv.classList.add("hidden");
     resultDiv.classList.remove("hidden");
-});
+}
+
+submitBtn.addEventListener("click", submit);
 
 okBtn.addEventListener("click", function() {
     answer = draw_word();
@@ -523,4 +527,10 @@ optionsok.addEventListener("click", function() {
 const tenadole = document.getElementById("te-na-dole");
 document.querySelector("#tenadole").addEventListener("click", () => {
     tenadole.classList.toggle("hidden");
+});
+
+input.addEventListener("keypress", e => {
+    if (e.key === "Enter") {
+        submit();
+    }
 });
