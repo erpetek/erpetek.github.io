@@ -497,7 +497,7 @@ function submit() {
 
 submitBtn.addEventListener("click", submit);
 
-okBtn.addEventListener("click", function() {
+function new_word() {
     answer = draw_word();
     toTranslateSpan.textContent = answer[0];
     if (availableWords.length === 0)
@@ -505,7 +505,10 @@ okBtn.addEventListener("click", function() {
     input.value = "";
     appDiv.classList.remove("hidden");
     resultDiv.classList.add("hidden");
-});
+    input.focus();
+}
+
+okBtn.addEventListener("click", new_word);
 
 opcje.addEventListener("click", function() {
      optionsDiv.classList.remove("hidden");
@@ -529,8 +532,12 @@ document.querySelector("#tenadole").addEventListener("click", () => {
     tenadole.classList.toggle("hidden");
 });
 
-input.addEventListener("keypress", e => {
+document.addEventListener("keypress", e => {
     if (e.key === "Enter") {
-        submit();
+        if (document.activeElement === input && !appDiv.classList.contains("hidden")) {
+            submit();
+        } else if (appDiv.classList.contains("hidden")) {
+            new_word();
+        }
     }
 });
