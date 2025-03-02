@@ -217,8 +217,13 @@ function apply_settings() {
     let opts = JSON.parse(localStorage.getItem("options"));
     if (opts !== undefined && opts !== null) {
         for (let i = 0; i < opts.length; i++) {
-            let e = document.getElementById(opts[i][0]);
-            e.checked = opts[i][1];
+            try {
+                let e = document.getElementById(opts[i][0]);
+                e.checked = opts[i][1];
+            } catch {
+                localStorage.clear();
+                window.location.reload();
+            }
         }
     }
     apply_settings();
