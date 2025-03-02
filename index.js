@@ -1,390 +1,144 @@
-const kapitelEins = [
-    {"ger": "die Absicht", "pol": "zamiar"},
-    {"ger": "der Englischkurs", "pol": "kurs języka angielskiego"},
-    {"ger": "der Führerschein", "pol": "prawo jazdy"},
-    {"ger": "die Lust", "pol": "ochota"},
-    {"ger": "die Nachhilfe", "pol": "korepetycje"},
-    {"ger": "der Plan", "pol": "plan"},
-    {"ger": "das Schuljahr", "pol": "rok szkolny"},
-    {"ger": "sich anmelden", "pol": "zgłosić się"},
-    {"ger": "schaffen", "pol": "radzić sobie"},
-    {"ger": "schauen", "pol": "oglądać"},
-    {"ger": "sich vorbereiten", "pol": "przygotowywać (się)"},
-    {"ger": "selbst bezahlen", "pol": "płacić samemu"},
-    {"ger": "Filme auf Englisch", "pol": "filmy po angielsku"},
-    {"ger": "Geld verdienen", "pol": "zarabiać pieniądze"},
-    {"ger": "Probleme in Mathe", "pol": "problemy z matematyką"},
-    {"ger": "das Abitur", "pol": "matura"},
-    {"ger": "die Angst", "pol": "strach"},
-    {"ger": "die Inspiration", "pol": "inspiracja"},
-    {"ger": "die Kraft", "pol": "siła"},
-    {"ger": "die Präsentation", "pol": "prezentacja"},
-    {"ger": "das Thema", "pol": "temat"},
-    {"ger": "der Unterricht", "pol": "lekcja, zajęcia"},
-    {"ger": "endlich", "pol": "nareszcie"},
-    {"ger": "intensiv", "pol": "intensywny"},
-    {"ger": "logisch", "pol": "logiczny"},
-    {"ger": "motiviert", "pol": "zmotywowany"},
-    {"ger": "ständig", "pol": "ciągle"},
-    {"ger": "stark", "pol": "silny"},
-    {"ger": "ziemlich", "pol": "dosyć"},
-    {"ger": "aufpassen", "pol": "uważać"},
-    {"ger": "befürchten", "pol": "obawiać się"},
-    {"ger": "einschlafen", "pol": "zasypiać"},
-    {"ger": "sich erholen", "pol": "odpoczywać"},
-    {"ger": "sich konzentrieren", "pol": "koncentrować się"},
-    {"ger": "schaffen", "pol": "radzić sobie"},
-    {"ger": "verlieren", "pol": "stracić"},
-    {"ger": "nichts machen", "pol": "nic nie robić"},
-    {"ger": "im Stress sein", "pol": "być w stresie"},
-    {"ger": "Informationen suchen", "pol": "szukać informacji"},
-    {"ger": "Das ist nicht lange hin!", "pol": "To nie tak długo."},
-    {"ger": "das Angebot", "pol": "oferta"},
-    {"ger": "die Anzeige", "pol": "ogłoszenie"},
-    {"ger": "der Fortschritt", "pol": "postęp"},
-    {"ger": "der Intensivkurs", "pol": "kurs intensywny"},
-    {"ger": "der Kursbeginn", "pol": "początek kursu"},
-    {"ger": "der Kursdauer", "pol": "czas trwania kursu"},
-    {"ger": "der Kursumfang", "pol": "tu: liczba godzin kursu"},
-    {"ger": "das Lehrwerk", "pol": "podręcznik"},
-    {"ger": "der Muttersprachler", "pol": "native speaker"},
-    {"ger": "das Niveau", "pol": "poziom"},
-    {"ger": "der Preis", "pol": "cena"},
-    {"ger": "der Sommerkurs", "pol": "kurs letni"},
-    {"ger": "die Sprachreise", "pol": "wyjazd połączony z nauką języka"},
-    {"ger": "die Unterrichtseinheit", "pol": "jednostka lekcyjna"},
-    {"ger": "das Unterrichtsmaterial", "pol": "materiał dydaktyczny"},
-    {"ger": "das Zertifikat", "pol": "certyfikat"},
-    {"ger": "einfach", "pol": "przeżywać"},
-    {"ger": "fehlen", "pol": "brakować"},
-    {"ger": "reisen", "pol": "podróżować"},
-    {"ger": "ein paar Infos", "pol": "kilka informacji"},
-    {"ger": "im Voraus", "pol": "z góry"},
-    {"ger": "in kurzer Zeit", "pol": "w krótkim czasie"},
-    {"ger": "das Archiv", "pol": "archiwum"},
-    {"ger": "der Bürger", "pol": "mieszczanin"},
-    {"ger": "das Gründungsjahr", "pol": "rok założenia"},
-    {"ger": "das Jubiläum", "pol": "jubileusz"},
-    {"ger": "die Klosterschule", "pol": "szkoła przyklasztorna"},
-    {"ger": "der Mönch", "pol": "mnich"},
-    {"ger": "die Naturwissenschaften", "pol": "nauki przyrodnicze"},
-    {"ger": "die Regel", "pol": "reguła"},
-    {"ger": "das Schulhaus", "pol": "budynek szkolny"},
-    {"ger": "die Strafe", "pol": "kara"},
-    {"ger": "bezahlen", "pol": "opłacać"},
-    {"ger": "verraten", "pol": "zdradzać"},
-    {"ger": "gemeinsam", "pol": "razem, wspólnie"},
-    {"ger": "getrennt", "pol": "oddzielnie"},
-    {"ger": "heutzutage", "pol": "obecnie"},
-    {"ger": "kostenlos", "pol": "bezpłatny"},
-    {"ger": "öffentlich", "pol": "publiczny"},
-    {"ger": "reich", "pol": "bogaty"},
-    {"ger": "streng", "pol": "surowy, wymagający"},
-    {"ger": "ein Jubiläum feiern", "pol": "obchodzić jubileusz"}
+const kapitelVier = [
+    {"ger": "der Feiertag, -e", "pol": "dzień świąteczny"},
+    {"ger": "das Fest, -e", "pol": "święto"},
+    {"ger": "der Geburtstag, -e", "pol": "urodziny"},
+    {"ger": "Heilige Drei Könige", "pol": "święto Trzech Króli"},
+    {"ger": "der Hochzeitstag, -e", "pol": "rocznica ślubu"},
+    {"ger": "das Neujahr", "pol": "Nowy Rok"},
+    {"ger": "der Nikolaustag", "pol": "mikołajki"},
+    {"ger": "das Silvester", "pol": "Sylwester"},
+    {"ger": "das Weihnachten", "pol": "Boże Narodzenie"},
+    {"ger": "feiern", "pol": "świętować"},
+    {"ger": "sich hin|setzen", "pol": "usiąść"},
+    {"ger": "lachen", "pol": "śmiać się"},
+    {"ger": "ganz anders", "pol": "całkiem inaczej"},
+    {"ger": "mehr", "pol": "więcej"},
+    {"ger": "nie", "pol": "nigdy"},
+    {"ger": "überhaupt nicht", "pol": "w ogóle, wcale"},
+    {"ger": "über die Feiertage", "pol": "w okresie świątecznym"},
+    {"ger": "bei der Firma arbeiten", "pol": "pracować w firmie"},
+    {"ger": "in die Heimat fliegen", "pol": "lecieć do kraju ojczystego"},
+    {"ger": "Urlaub nehmen", "pol": "brać urlop"},
+    {"ger": "die Absage, -n", "pol": "odmowa"},
+    {"ger": "die Einladung, -en", "pol": "zaproszenie"},
+    {"ger": "die Geburtstagsparty, -s", "pol": "impreza urodzinowa"},
+    {"ger": "das Geschenk, -e", "pol": "prezent"},
+    {"ger": "das Lebensjahr, -e", "pol": "rok życia"},
+    {"ger": "die Zusage, -n", "pol": "przyjęcie (zaproszenia)"},
+    {"ger": "ein|laden", "pol": "zapraszać"},
+    {"ger": "sich entscheiden", "pol": "decydować się"},
+    {"ger": "mit|bringen", "pol": "przynosić ze sobą"},
+    {"ger": "nach|feiern", "pol": "świętować w późniejszym terminie"},
+    {"ger": "sorgen", "pol": "zadbać"},
+    {"ger": "wünschen", "pol": "życzyć"},
+    {"ger": "Bescheid sagen", "pol": "powiadomić"},
+    {"ger": "einen Geburtstag ein|laden", "pol": "zapraszać na urodziny"},
+    {"ger": "eine Party machen", "pol": "organizować imprezę"},
+    {"ger": "18 (Jahre alt) werden", "pol": "kończyć 18 lat"},
+    {"ger": "gute Laune", "pol": "dobry humor"},
+    {"ger": "zu dritt", "pol": "w trójkę, w trzech, we troje"},
+    {"ger": "Alles Gute zum Geburtstag!", "pol": "Wszystkiego najlepszego z okazji urodzin!"},
+    {"ger": "Zum Geburtstag viel Glück!", "pol": "Dużo szczęścia z okazji urodzin!"},
+    {"ger": "Lass es dir gutgehen!", "pol": "Powodzenia!"},
+    {"ger": "Herzlichen Glückwunsch!", "pol": "Serdeczne życzenia!"},
+    {"ger": "die 3-Stunden-Exkursion, -en", "pol": "wycieczka trzygodzinna"},
+    {"ger": "das 4-Gänge-Menü, -s", "pol": "czterodaniowe menu"},
+    {"ger": "das Farbberatung, -en", "pol": "doradztwo w doborze kolorów"},
+    {"ger": "das Geburtstagsgeschenk, -e", "pol": "prezent urodzinowy"},
+    {"ger": "die Geschenkidee, -n", "pol": "pomysł na prezent"},
+    {"ger": "der Grillkurs, -e", "pol": "kurs grillowania"},
+    {"ger": "die Höhle, -n", "pol": "jaskinia"},
+    {"ger": "die Höhlenwanderung, -en", "pol": "wędrówka po jaskiniach"},
+    {"ger": "die Leihausrüstung, -en", "pol": "wypożyczony sprzęt"},
+    {"ger": "der Saunabesuch, -e", "pol": "wizyta w saunie"},
+    {"ger": "die Shoppingtour, -en", "pol": "wyprawa na zakupy"},
+    {"ger": "das Sicherheitstraining, -s", "pol": "trening bezpieczeństwa"},
+    {"ger": "die Stilberatung, -en", "pol": "doradztwo stylu"},
+    {"ger": "das Thermalbad, -er", "pol": "kąpielisko termalne"},
+    {"ger": "das Traumgeschenk, -e", "pol": "wymarzony prezent"},
+    {"ger": "die Wahl, -en", "pol": "wybór"},
+    {"ger": "der Warenkorb, -e", "pol": "koszyk"},
+    {"ger": "inklusive", "pol": "wliczone (w cenę)"},
+    {"ger": "schenken", "pol": "dawać w prezencie"},
+    {"ger": "besondere Geschenke", "pol": "wyjątkowe prezenty"},
+    {"ger": "gelungene Geschenke", "pol": "udane prezenty"},
+    {"ger": "erfahrene Guides", "pol": "doświadczeni przewodnicy"},
+    {"ger": "Komplex von Höhlen unter Anleitung", "pol": "kompleks jaskiń pod okiem instruktora"},
+    {"ger": "sich amüsieren", "pol": "bawić się"},
+    {"ger": "sich langweilen", "pol": "nudzić się"},
+    {"ger": "sich unterhalten", "pol": "bawić się, rozmawiać"},
+    {"ger": "nichts ab|bekommen", "pol": "nic nie dostać"},
+    {"ger": "sich total freuen", "pol": "cieszyć się niesamowicie"},
+    {"ger": "Geschenke bekommen", "pol": "dostawać prezenty"},
+    {"ger": "Gäste ein|laden", "pol": "zapraszać gości"},
+    {"ger": "sich super unterhalten", "pol": "rozmawiać super"},
+    {"ger": "Spaß haben", "pol": "mieć przyjemność"},
+    {"ger": "Keine Ahnung.", "pol": "Nie mam pojęcia."},
+    {"ger": "Echt super!", "pol": "Naprawdę świetnie!"},
+    {"ger": "Echt schade.", "pol": "Szkoda."},
+    {"ger": "Ich freue mich schon darauf.", "pol": "Już się na to cieszę."},
+    {"ger": "So ist das Leben.", "pol": "Takie jest życie."},
+    {"ger": "Schauen wir mal.", "pol": "Zobaczymy."}
 ];
-const kapitelZwei = [
-    {
-        "ger": "das Bargeld",
-        "pol": "gotówka"
-    },
-    {
-        "ger": "das Kleingeld",
-        "pol": "drobne pieniądze"
-    },
-    {
-        "ger": "das Rückgeld",
-        "pol": "reszta (pieniądze)"
-    },
-    {
-        "ger": "bar",
-        "pol": "w gotówce, gotówkowo"
-    },
-    {
-        "ger": "brauchen",
-        "pol": "potrzebować"
-    },
-    {
-        "ger": "dabei haben",
-        "pol": "mieć przy sobie"
-    },
-    {
-        "ger": "zahlen",
-        "pol": "płacić"
-    },
-    {
-        "ger": "bar zahlen",
-        "pol": "płacić gotówką"
-    },
-    {
-        "ger": "Ich habe es passend.",
-        "pol": "Mam odliczoną kwotę."
-    },
-    {
-        "ger": "die Bestätigung",
-        "pol": "potwierdzenie"
-    },
-    {
-        "ger": "die Karte",
-        "pol": "karta"
-    },
-    {
-        "ger": "das Lesegerät",
-        "pol": "czytnik"
-    },
-    {
-        "ger": "die PIN-Nummer",
-        "pol": "numer PIN"
-    },
-    {
-        "ger": "die Taste",
-        "pol": "przycisk"
-    },
-    {
-        "ger": "kontaktlos",
-        "pol": "bezdotykowo"
-    },
-    {
-        "ger": "drücken",
-        "pol": "naciskać"
-    },
-    {
-        "ger": "ein geben",
-        "pol": "wprowadzać"
-    },
-    {
-        "ger": "Das macht...",
-        "pol": "To wynosi..."
-    },
-    {
-        "ger": "das Aufladen",
-        "pol": "doładowanie"
-    },
-    {
-        "ger": "ein zahlen",
-        "pol": "wpłacać"
-    },
-    {
-        "ger": "eröffnen",
-        "pol": "otwierać (konto)"
-    },
-    {
-        "ger": "unterschreiben",
-        "pol": "podpisywać"
-    },
-    {
-        "ger": "vorbei kommen",
-        "pol": "wpadać"
-    },
-    {
-        "ger": "eine Bankkarte bekommen",
-        "pol": "dostać kartę płatniczą"
-    },
-    {
-        "ger": "ein Dokument ausfüllen",
-        "pol": "wypełniać dokument"
-    },
-    {
-        "ger": "ein Konto eröffnen",
-        "pol": "otwierać konto"
-    },
-    {
-        "ger": "per Post schicken",
-        "pol": "wysyłać pocztą"
-    },
-    {
-        "ger": "der Auftrag",
-        "pol": "zlecenie"
-    },
-    {
-        "ger": "der Betrag",
-        "pol": "kwota"
-    },
-    {
-        "ger": "die Funktion",
-        "pol": "funkcja"
-    },
-    {
-        "ger": "die Geheimzahl",
-        "pol": "numer PIN"
-    },
-    {
-        "ger": "der Kontostand",
-        "pol": "stan konta"
-    },
-    {
-        "ger": "die Kreissparkasse",
-        "pol": "orkęgowa kasa oszczędności"
-    },
-    {
-        "ger": "die Taste",
-        "pol": "klawisz"
-    },
-    {
-        "ger": "aus drücken",
-        "pol": "wyciskać"
-    },
-    {
-        "ger": "aus wählen",
-        "pol": "wybierać"
-    },
-    {
-        "ger": "ein geben",
-        "pol": "podawać (numer)"
-    },
-    {
-        "ger": "die PIN eingeben",
-        "pol": "podawać PIN"
-    },
-    {
-        "ger": "mit der grünen Taste",
-        "pol": "zielonym klawiszem"
-    },
-    {
-        "ger": "das Aufladen",
-        "pol": "doładowanie"
-    },
-    {
-        "ger": "die Bankkarte",
-        "pol": "karta płatnicza"
-    },
-    {
-        "ger": "das Dokument",
-        "pol": "dokument"
-    },
-    {
-        "ger": "der Geldautomat",
-        "pol": "bankomat"
-    },
-    {
-        "ger": "das Girokonto",
-        "pol": "konto oszczędnościowo-rozliczeniowe"
-    },
-    {
-        "ger": "die Kondition",
-        "pol": "warunek"
-    },
-    {
-        "ger": "die Kontoführung",
-        "pol": "prowadzenie konta"
-    },
-    {
-        "ger": "das Online-Banking",
-        "pol": "bankowość internetowa"
-    },
-    {
-        "ger": "der Personalausweis",
-        "pol": "dowód osobisty"
-    },
-    {
-        "ger": "das Sparkonto",
-        "pol": "konto oszczędnościowe"
-    },
-    {
-        "ger": "die Website",
-        "pol": "strona internetowa"
-    },
-    {
-        "ger": "der Zugang",
-        "pol": "dostęp"
-    },
-    {
-        "ger": "bargeldlos",
-        "pol": "bezgotówkowy"
-    },
-    {
-        "ger": "kostenlos",
-        "pol": "bezpłatny"
-    },
-    {
-        "ger": "ab heben",
-        "pol": "podejmować (pieniądze)"
-    },
-    {
-        "ger": "an bieten",
-        "pol": "oferować"
-    },
-    {
-        "ger": "das Ergebnis",
-        "pol": "rezultat"
-    },
-    {
-        "ger": "die Rate",
-        "pol": "rata"
-    },
-    {
-        "ger": "die Schulden",
-        "pol": "długi"
-    },
-    {
-        "ger": "die Spardose",
-        "pol": "skarbonka"
-    },
-    {
-        "ger": "das Sparschwein",
-        "pol": "świnka skarbonka"
-    },
-    {
-        "ger": "das Taschengeld",
-        "pol": "kieszonkowe"
-    },
-    {
-        "ger": "aus geben",
-        "pol": "wydawać"
-    },
-    {
-        "ger": "sich lohnen",
-        "pol": "opłacać się"
-    },
-    {
-        "ger": "sparen",
-        "pol": "oszczędzać"
-    },
-    {
-        "ger": "um gehen",
-        "pol": "obchodzić się"
-    },
-    {
-        "ger": "alle",
-        "pol": "wszyscy, wszystkie"
-    },
-    {
-        "ger": "einige",
-        "pol": "kilku, kilkoro"
-    },
-    {
-        "ger": "jeder",
-        "pol": "każdy"
-    },
-    {
-        "ger": "keiner",
-        "pol": "nikt"
-    },
-    {
-        "ger": "viel",
-        "pol": "wiele"
-    },
-    {
-        "ger": "wenig",
-        "pol": "mało"
-    },
-    {
-        "ger": "mit dem Geld umgehen",
-        "pol": "obchodzić się z pieniędzmi"
-    }
+
+const kapitelVierZdania = [
+    {"ger": "Ist der 1. (erste) Januar ein Montag?", "pol": "Czy 1 stycznia wypada w poniedziałek?"},
+    {"ger": "Nein, der 1. (erste) Januar ist ein Sonntag.", "pol": "Nie, 1 stycznia jest w niedzielę."},
+    {"ger": "Ist der 31. (einunddreißigste) Dezember frei?", "pol": "Czy 31 grudnia jest dniem wolnym?"},
+    {"ger": "Ja, Silvester ist schulfrei.", "pol": "Tak, Sylwester jest dniem wolnym w szkołach."},
+    {"ger": "Was feierst du am 3. (dritten) April?", "pol": "Co świętujesz 3 kwietnia?"},
+    {"ger": "Den Geburtstag von meiner Oma.", "pol": "Urodziny mojej babci."},
+    {"ger": "Wann arbeitet man nicht?", "pol": "Kiedy się nie pracuje?"},
+    {"ger": "Zwischen den Jahren.", "pol": "W okresie międzyświątecznym."},
+    {"ger": "Wann hast du Geburtstag?", "pol": "Kiedy masz urodziny?"},
+    {"ger": "Ich habe am 2. (zweiten) Juni Geburtstag.", "pol": "Mam urodziny 2 czerwca."},
+    {"ger": "Wann und wo machst du die Geburtstagsparty?", "pol": "Gdzie i kiedy robisz imprezę urodzinową?"},
+    {"ger": "Am Samstag bei mir zu Hause.", "pol": "W sobotę u mnie w domu."},
+    {"ger": "Kommst du zu meiner Party?", "pol": "Przyjdziesz na moją imprezę?"},
+    {"ger": "Danke für die Einladung. Ich komme gern.", "pol": "Dziękuję za zaproszenie. Chętnie przyjdę."},
+    {"ger": "Ich lade dich zu meinem Geburtstag ein.", "pol": "Zapraszam cię na moje urodziny."},
+    {"ger": "Leider kann ich nicht kommen.", "pol": "Niestety nie mogę przyjść."},
+    {"ger": "Was schenken wir Hannes?", "pol": "Co podarujemy Hannesowi?"},
+    {"ger": "Wir schenken ihm einen Fallschirmsprung.", "pol": "Podarujemy mu skok ze spadochronem."},
+    {"ger": "Was geben wir Amelie?", "pol": "Co damy Amelie?"},
+    {"ger": "Wir geben ihr eine Sportuhr.", "pol": "Damy jej sportowy zegarek."},
+    {"ger": "Wie gefällt dir diese Idee?", "pol": "Jak podoba ci się ten pomysł?"},
+    {"ger": "Ich finde, dass der Grillkurs eine gute Idee ist.", "pol": "Uważam, że kurs grillowania to dobry pomysł."},
+    {"ger": "Was ist dein Traumgeschenk?", "pol": "Jaki jest twój wymarzony prezent?"},
+    {"ger": "Mir gefällt die Höhlenwanderung.", "pol": "Podoba mi się wędrówka po jaskiniach."},
+    {"ger": "Wie war es auf der Party?", "pol": "Jak było na imprezie?"},
+    {"ger": "Na ja, irgendwie langweilig.", "pol": "Tak sobie, jakoś nudno."},
+    {"ger": "Hast du dich gut amüsiert?", "pol": "Czy dobrze się bawiłeś?"},
+    {"ger": "Ja, ich amüsiere mich immer gut.", "pol": "Tak, zawsze się dobrze bawię."},
+    {"ger": "Das Essen hat mir gut geschmeckt.", "pol": "Jedzenie mi smakowało."},
+    {"ger": "Ich hatte nach der Party noch Hunger.", "pol": "A ja po imprezie byłem jeszcze głodny."},
+    {"ger": "Ich konnte leider nicht kommen.", "pol": "Nie mogłam niestety przyjść."},
+    {"ger": "Echt schade.", "pol": "Naprawdę szkoda."}
 ]
-const prateritum = [
-    {"ger": "lernen", "pra": "lernte", "pol": "uczyć się"},
-    {"ger": "sein", "pra": "war", "pol": "być"},
-    {"ger": "besuchen", "pra": "besuchte", "pol": "uczęszczać"},
-    {"ger": "unterrichten", "pra": "unterrichtete", "pol": "nauczać"},
-    {"ger": "stehen", "pra": "stand", "pol": "stać"},
-    {"ger": "geben", "pra": "gab", "pol": "dawać"},
-    {"ger": "gehen", "pra": "ging", "pol": "iść, chodzić"},
-    {"ger": "müssen", "pra": "musste", "pol": "musieć"},
-    {"ger": "dürfen", "pra": "durfte", "pol": "mieć pozwolenie"},
-    {"ger": "arbeiten", "pra": "arbeitete", "pol": "pracować"},
-    {"ger": "bekommen", "pra": "bekam", "pol": "dostać, otrzymać"}
+
+const porzadkowe = [
+    {"ger": "erste", "pol": "pierwszy"},
+    {"ger": "zweite", "pol": "drugi"},
+    {"ger": "dritte", "pol": "trzeci"},
+    {"ger": "vierte", "pol": "czwarty"},
+    {"ger": "fünfte", "pol": "piąty"},
+    {"ger": "sechste", "pol": "szósty"},
+    {"ger": "siebte", "pol": "siódmy"},
+    {"ger": "achte", "pol": "ósmy"},
+    {"ger": "neunte", "pol": "dziewiąty"},
+    {"ger": "zehnte", "pol": "dziesiąty"},
+    {"ger": "elfte", "pol": "jedenasty"},
+    {"ger": "zwölfte", "pol": "dwunasty"},
+    {"ger": "dreizehnte", "pol": "trzynasty"},
+    {"ger": "vierzehnte", "pol": "czternasty"},
+    {"ger": "fünfzehnte", "pol": "piętnasty"},
+    {"ger": "sechzehnte", "pol": "szesnasty"},
+    {"ger": "siebzehnte", "pol": "siedemnasty"},
+    {"ger": "achtzehnte", "pol": "osiemnasty"},
+    {"ger": "neunzehnte", "pol": "dziewiętnasty"},
+    {"ger": "zwanzigste", "pol": "dwudziesty"}
 ]
+
 let preferences = [false, false, false];
 let availableWords = create_word_array(true, true, true);
 let answer;
@@ -409,9 +163,9 @@ let mode = 0;
 
 function create_word_array() {
     let array = [];
-    if (preferences[0]) array = array.concat(kapitelEins);
-    if (preferences[1]) array = array.concat(kapitelZwei);
-    if (preferences[2]) array = array.concat(prateritum);
+    if (preferences[0]) array = array.concat(kapitelVier);
+    if (preferences[1]) array = array.concat(kapitelVierZdania);
+    if (preferences[2]) array = array.concat(porzadkowe);
     return array;
 }
 
