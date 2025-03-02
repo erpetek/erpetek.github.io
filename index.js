@@ -1,4 +1,4 @@
-const kapitelVier = [
+const kapitelVier = [[
     {"ger": "der Feiertag, -e", "pol": "dzień świąteczny"},
     {"ger": "das Fest, -e", "pol": "święto"},
     {"ger": "der Geburtstag, -e", "pol": "urodziny"},
@@ -17,7 +17,7 @@ const kapitelVier = [
     {"ger": "über die Feiertage", "pol": "w okresie świątecznym"},
     {"ger": "bei der Firma arbeiten", "pol": "pracować w firmie"},
     {"ger": "in die Heimat fliegen", "pol": "lecieć do kraju ojczystego"},
-    {"ger": "Urlaub nehmen", "pol": "brać urlop"},
+    {"ger": "Urlaub nehmen", "pol": "brać urlop"}],[
     {"ger": "die Absage, -n", "pol": "odmowa"},
     {"ger": "die Einladung, -en", "pol": "zaproszenie"},
     {"ger": "die Geburtstagsparty, -s", "pol": "impreza urodzinowa"},
@@ -39,7 +39,7 @@ const kapitelVier = [
     {"ger": "Alles Gute zum Geburtstag!", "pol": "Wszystkiego najlepszego z okazji urodzin!"},
     {"ger": "Zum Geburtstag viel Glück!", "pol": "Dużo szczęścia z okazji urodzin!"},
     {"ger": "Lass es dir gutgehen!", "pol": "Powodzenia!"},
-    {"ger": "Herzlichen Glückwunsch!", "pol": "Serdeczne życzenia!"},
+    {"ger": "Herzlichen Glückwunsch!", "pol": "Serdeczne życzenia!"}],[
     {"ger": "die 3-Stunden-Exkursion, -en", "pol": "wycieczka trzygodzinna"},
     {"ger": "das 4-Gänge-Menü, -s", "pol": "czterodaniowe menu"},
     {"ger": "das Farbberatung, -en", "pol": "doradztwo w doborze kolorów"},
@@ -63,7 +63,7 @@ const kapitelVier = [
     {"ger": "gelungene Geschenke", "pol": "udane prezenty"},
     {"ger": "erfahrene Guides", "pol": "doświadczeni przewodnicy"},
     {"ger": "Komplex von Höhlen", "pol": "kompleks jaskiń"},
-    {"ger": "unter Anleitung", "pol": "pod okiem instruktora"},
+    {"ger": "unter Anleitung", "pol": "pod okiem instruktora"}],[
     {"ger": "sich amüsieren", "pol": "bawić się"},
     {"ger": "sich langweilen", "pol": "nudzić się"},
     {"ger": "sich unterhalten", "pol": "bawić się, rozmawiać"},
@@ -79,7 +79,7 @@ const kapitelVier = [
     {"ger": "Ich freue mich schon darauf.", "pol": "Już się na to cieszę."},
     {"ger": "So ist das Leben.", "pol": "Takie jest życie."},
     {"ger": "Schauen wir mal.", "pol": "Zobaczymy."}
-];
+]];
 
 const kapitelVierZdania = [
     {"ger": "Ist der 1. (erste) Januar ein Montag?", "pol": "Czy 1 stycznia wypada w poniedziałek?"},
@@ -163,7 +163,10 @@ let mode = 0;
 
 function create_word_array() {
     let array = [];
-    if (preferences[0]) array = array.concat(kapitelVier);
+    if (preferences[0][0]) array = array.concat(kapitelVier[0]);
+    if (preferences[0][1]) array = array.concat(kapitelVier[1]);
+    if (preferences[0][2]) array = array.concat(kapitelVier[2]);
+    if (preferences[0][3]) array = array.concat(kapitelVier[3]);
     if (preferences[1]) array = array.concat(kapitelVierZdania);
     if (preferences[2]) array = array.concat(porzadkowe);
     return array;
@@ -171,7 +174,7 @@ function create_word_array() {
 
 function apply_settings() {
     let ok = document.querySelectorAll(".option input:checked");
-    preferences[0] = false;
+    preferences[0] = Array();
     preferences[1] = false;
     preferences[2] = false;
     ok.forEach(e => {
@@ -185,8 +188,17 @@ function apply_settings() {
             case "random":
                 mode = 2;
                 break;
-            case "keins":
-                preferences[0] = true;
+            case "k4t1":
+                preferences[0][0] = true;
+                break;
+            case "k4t2":
+                preferences[0][1] = true;
+                break;
+            case "k4t3":
+                preferences[0][2] = true;
+                break;
+            case "k4t4":
+                preferences[0][3] = true;
                 break;
             case "kzwei":
                 preferences[1] = true;
@@ -222,7 +234,7 @@ function draw_word() {
     availableWords.splice(randomIndex, 1);
     let t = word.ger;
     let a = word.pol;
-    if (word.pra !== undefined) {
+    if (word.pra) {
         t = `${t} => ${word.pra}`;
     }
     let ok = mode;
@@ -281,10 +293,12 @@ optionsok.addEventListener("click", function() {
     toTranslateSpan.textContent = "Kliknij przycisk aby wylosowac ok?";
 });
 
+/*
 const tenadole = document.getElementById("te-na-dole");
 document.querySelector("#tenadole").addEventListener("click", () => {
     tenadole.classList.toggle("hidden");
 });
+*/
 
 document.addEventListener("keypress", e => {
     if (e.key === "Enter") {
