@@ -70,7 +70,7 @@ const kapitelVier = [
     {"ger": "sich total freuen", "pol": "cieszyć się niesamowicie"},
     {"ger": "Geschenke bekommen", "pol": "dostawać prezenty"},
     {"ger": "Gäste ein|laden", "pol": "zapraszać gości"},
-    {"ger": "sich super unterhalten", "pol": "rozmawiać super"},
+    {"ger": "sich super unterhalten", "pol": "bawić się super, rozmawiać"},
     {"ger": "Spaß haben", "pol": "mieć przyjemność"},
     {"ger": "Keine Ahnung.", "pol": "Nie mam pojęcia."},
     {"ger": "Echt super!", "pol": "Naprawdę świetnie!"},
