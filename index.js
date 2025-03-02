@@ -75,7 +75,7 @@ const kapitelVier = [
     {"ger": "Spaß haben", "pol": "mieć przyjemność"},
     {"ger": "Keine Ahnung.", "pol": "Nie mam pojęcia."},
     {"ger": "Echt super!", "pol": "Naprawdę świetnie!"},
-    {"ger": "Echt schade.", "pol": "Szkoda."},
+    {"ger": "Echt schade.", "pol": "Naprawdę Szkoda."},
     {"ger": "Ich freue mich schon darauf.", "pol": "Już się na to cieszę."},
     {"ger": "So ist das Leben.", "pol": "Takie jest życie."},
     {"ger": "Schauen wir mal.", "pol": "Zobaczymy."}
