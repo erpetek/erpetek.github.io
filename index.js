@@ -300,6 +300,11 @@ document.querySelector("#tenadole").addEventListener("click", () => {
 });
 */
 
+document.getElementById("clear").addEventListener("click", function() {
+    localStorage.clear();
+    window.location.reload();
+});
+
 document.addEventListener("keypress", e => {
     if (e.key === "Enter") {
         if (document.activeElement === input && !appDiv.classList.contains("hidden")) {
