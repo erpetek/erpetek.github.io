@@ -82,38 +82,46 @@ const kapitelVier = [[
 ]];
 
 const kapitelVierZdania = [
-    {"ger": "Ist der 1. (erste) Januar ein Montag?", "pol": "Czy 1 stycznia wypada w poniedziałek?"},
-    {"ger": "Nein, der 1. (erste) Januar ist ein Sonntag.", "pol": "Nie, 1 stycznia jest w niedzielę."},
-    {"ger": "Ist der 31. (einunddreißigste) Dezember frei?", "pol": "Czy 31 grudnia jest dniem wolnym?"},
-    {"ger": "Ja, Silvester ist schulfrei.", "pol": "Tak, Sylwester jest dniem wolnym w szkołach."},
-    {"ger": "Was feierst du am 3. (dritten) April?", "pol": "Co świętujesz 3 kwietnia?"},
-    {"ger": "Den Geburtstag von meiner Oma.", "pol": "Urodziny mojej babci."},
-    {"ger": "Wann arbeitet man nicht?", "pol": "Kiedy się nie pracuje?"},
-    {"ger": "Zwischen den Jahren.", "pol": "W okresie międzyświątecznym."},
-    {"ger": "Wann hast du Geburtstag?", "pol": "Kiedy masz urodziny?"},
-    {"ger": "Ich habe am 2. (zweiten) Juni Geburtstag.", "pol": "Mam urodziny 2 czerwca."},
-    {"ger": "Wann und wo machst du die Geburtstagsparty?", "pol": "Gdzie i kiedy robisz imprezę urodzinową?"},
-    {"ger": "Am Samstag bei mir zu Hause.", "pol": "W sobotę u mnie w domu."},
-    {"ger": "Kommst du zu meiner Party?", "pol": "Przyjdziesz na moją imprezę?"},
-    {"ger": "Danke für die Einladung. Ich komme gern.", "pol": "Dziękuję za zaproszenie. Chętnie przyjdę."},
-    {"ger": "Ich lade dich zu meinem Geburtstag ein.", "pol": "Zapraszam cię na moje urodziny."},
-    {"ger": "Leider kann ich nicht kommen.", "pol": "Niestety nie mogę przyjść."},
-    {"ger": "Was schenken wir Hannes?", "pol": "Co podarujemy Hannesowi?"},
-    {"ger": "Wir schenken ihm einen Fallschirmsprung.", "pol": "Podarujemy mu skok ze spadochronem."},
-    {"ger": "Was geben wir Amelie?", "pol": "Co damy Amelie?"},
-    {"ger": "Wir geben ihr eine Sportuhr.", "pol": "Damy jej sportowy zegarek."},
-    {"ger": "Wie gefällt dir diese Idee?", "pol": "Jak podoba ci się ten pomysł?"},
-    {"ger": "Ich finde, dass der Grillkurs eine gute Idee ist.", "pol": "Uważam, że kurs grillowania to dobry pomysł."},
-    {"ger": "Was ist dein Traumgeschenk?", "pol": "Jaki jest twój wymarzony prezent?"},
-    {"ger": "Mir gefällt die Höhlenwanderung.", "pol": "Podoba mi się wędrówka po jaskiniach."},
-    {"ger": "Wie war es auf der Party?", "pol": "Jak było na imprezie?"},
-    {"ger": "Na ja, irgendwie langweilig.", "pol": "Tak sobie, jakoś nudno."},
-    {"ger": "Hast du dich gut amüsiert?", "pol": "Czy dobrze się bawiłeś?"},
-    {"ger": "Ja, ich amüsiere mich immer gut.", "pol": "Tak, zawsze się dobrze bawię."},
-    {"ger": "Das Essen hat mir gut geschmeckt.", "pol": "Jedzenie mi smakowało."},
-    {"ger": "Ich hatte nach der Party noch Hunger.", "pol": "A ja po imprezie byłem jeszcze głodny."},
-    {"ger": "Ich konnte leider nicht kommen.", "pol": "Nie mogłam niestety przyjść."},
-    {"ger": "Echt schade.", "pol": "Naprawdę szkoda."}
+    [
+        {"ger": "Ist der 1. (erste) Januar ein Montag?", "pol": "Czy 1 stycznia wypada w poniedziałek?"},
+        {"ger": "Nein, der 1. (erste) Januar ist ein Sonntag.", "pol": "Nie, 1 stycznia jest w niedzielę."},
+        {"ger": "Ist der 31. (einunddreißigste) Dezember frei?", "pol": "Czy 31 grudnia jest dniem wolnym?"},
+        {"ger": "Ja, Silvester ist schulfrei.", "pol": "Tak, Sylwester jest dniem wolnym w szkołach."},
+        {"ger": "Was feierst du am 3. (dritten) April?", "pol": "Co świętujesz 3 kwietnia?"},
+        {"ger": "Den Geburtstag von meiner Oma.", "pol": "Urodziny mojej babci."},
+        {"ger": "Wann arbeitet man nicht?", "pol": "Kiedy się nie pracuje?"},
+        {"ger": "Zwischen den Jahren.", "pol": "W okresie międzyświątecznym."}
+    ],
+    [
+        {"ger": "Wann hast du Geburtstag?", "pol": "Kiedy masz urodziny?"},
+        {"ger": "Ich habe am 2. (zweiten) Juni Geburtstag.", "pol": "Mam urodziny 2 czerwca."},
+        {"ger": "Wann und wo machst du die Geburtstagsparty?", "pol": "Gdzie i kiedy robisz imprezę urodzinową?"},
+        {"ger": "Am Samstag bei mir zu Hause.", "pol": "W sobotę u mnie w domu."},
+        {"ger": "Kommst du zu meiner Party?", "pol": "Przyjdziesz na moją imprezę?"},
+        {"ger": "Danke für die Einladung. Ich komme gern.", "pol": "Dziękuję za zaproszenie. Chętnie przyjdę."},
+        {"ger": "Ich lade dich zu meinem Geburtstag ein.", "pol": "Zapraszam cię na moje urodziny."},
+        {"ger": "Leider kann ich nicht kommen.", "pol": "Niestety nie mogę przyjść."}
+    ],
+    [
+        {"ger": "Was schenken wir Hannes?", "pol": "Co podarujemy Hannesowi?"},
+        {"ger": "Wir schenken ihm einen Fallschirmsprung.", "pol": "Podarujemy mu skok ze spadochronem."},
+        {"ger": "Was geben wir Amelie?", "pol": "Co damy Amelie?"},
+        {"ger": "Wir geben ihr eine Sportuhr.", "pol": "Damy jej sportowy zegarek."},
+        {"ger": "Wie gefällt dir diese Idee?", "pol": "Jak podoba ci się ten pomysł?"},
+        {"ger": "Ich finde, dass der Grillkurs eine gute Idee ist.", "pol": "Uważam, że kurs grillowania to dobry pomysł."},
+        {"ger": "Was ist dein Traumgeschenk?", "pol": "Jaki jest twój wymarzony prezent?"},
+        {"ger": "Mir gefällt die Höhlenwanderung.", "pol": "Podoba mi się wędrówka po jaskiniach."}
+    ],
+    [
+        {"ger": "Wie war es auf der Party?", "pol": "Jak było na imprezie?"},
+        {"ger": "Na ja, irgendwie langweilig.", "pol": "Tak sobie, jakoś nudno."},
+        {"ger": "Hast du dich gut amüsiert?", "pol": "Czy dobrze się bawiłeś?"},
+        {"ger": "Ja, ich amüsiere mich immer gut.", "pol": "Tak, zawsze się dobrze bawię."},
+        {"ger": "Das Essen hat mir gut geschmeckt.", "pol": "Jedzenie mi smakowało."},
+        {"ger": "Ich hatte nach der Party noch Hunger.", "pol": "A ja po imprezie byłem jeszcze głodny."},
+        {"ger": "Ich konnte leider nicht kommen.", "pol": "Nie mogłam niestety przyjść."},
+        {"ger": "Echt schade.", "pol": "Naprawdę szkoda."}
+    ]
 ]
 
 const porzadkowe = [
@@ -167,7 +175,10 @@ function create_word_array() {
     if (preferences[0][1]) array = array.concat(kapitelVier[1]);
     if (preferences[0][2]) array = array.concat(kapitelVier[2]);
     if (preferences[0][3]) array = array.concat(kapitelVier[3]);
-    if (preferences[1]) array = array.concat(kapitelVierZdania);
+    if (preferences[1][0]) array = array.concat(kapitelVierZdania[0]);
+    if (preferences[1][1]) array = array.concat(kapitelVierZdania[1]);
+    if (preferences[1][2]) array = array.concat(kapitelVierZdania[2]);
+    if (preferences[1][3]) array = array.concat(kapitelVierZdania[3]);
     if (preferences[2]) array = array.concat(porzadkowe);
     return array;
 }
@@ -175,7 +186,7 @@ function create_word_array() {
 function apply_settings() {
     let ok = document.querySelectorAll(".option input:checked");
     preferences[0] = Array();
-    preferences[1] = false;
+    preferences[1] = Array();
     preferences[2] = false;
     ok.forEach(e => {
         switch (e.id) {
@@ -200,8 +211,17 @@ function apply_settings() {
             case "k4t4":
                 preferences[0][3] = true;
                 break;
-            case "kzwei":
-                preferences[1] = true;
+            case "kzwei1":
+                preferences[1][0] = true;
+                break;
+            case "kzwei2":
+                preferences[1][1] = true;
+                break;
+            case "kzwei3":
+                preferences[1][2] = true;
+                break;
+            case "kzwei4":
+                preferences[1][3] = true;
                 break;
             case "prateritum":
                 preferences[2] = true;
