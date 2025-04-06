@@ -34,7 +34,7 @@ const kapitelVier = [
         {"ger": "der Teppich", "pol": "dywan"},
         {"ger": "die Tür", "pol": "drzwi"},
         {"ger": "die Wand", "pol": "ściana"},
-        {"ger": "ab|hängen", "pol": "zależeć"},
+        {"ger": "ab|hängen", "pol": "zdejmować (ze ściany)"},
         {"ger": "ändern", "pol": "zmieniać"},
         {"ger": "hängen", "pol": "wieszać"},
         {"ger": "liegen / legen", "pol": "leżeć / kłaść"},
@@ -46,7 +46,7 @@ const kapitelVier = [
         {"ger": "neben", "pol": "obok"},
         {"ger": "über", "pol": "nad"},
         {"ger": "unter", "pol": "pod"},
-        {"ger": "zwischen", "pol": "między"},
+        {"ger": "zwischen", "pol": "(po)między"},
         {"ger": "das Zimmer um|räumen", "pol": "przemeblowywać pokój"},
         {"ger": "alles ändern", "pol": "zmieniać wszystko"},
         {"ger": "Alles sieht neu aus.", "pol": "Wszystko wygląda na nowe."}
